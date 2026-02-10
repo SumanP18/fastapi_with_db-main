@@ -7,8 +7,13 @@ load_dotenv()
 Base = declarative_base()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
-print("DATABASE_URL",DATABASE_URL)
-# Create engine once at module level
+
+if not DATABASE_URL:
+    print("WARNING: DATABASE_URL not found in environment variables. Falling back to local SQLite database.")
+    DATABASE_URL = "sqlite:///./test.db"
+
+print("DATABASE_URL:", DATABASE_URL)
+# Create engine
 engine = create_engine(DATABASE_URL)
 
 # Create SessionLocal class for creating database sessions
