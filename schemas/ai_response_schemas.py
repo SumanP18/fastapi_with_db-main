@@ -6,3 +6,10 @@ class AIRequest(BaseModel):
 
 class AIResponse(BaseModel):
     response: str
+
+class ImageRequest(BaseModel):
+    prompt: str
+    size: str = "1024x1024"
+
+class ImageResponse(BaseModel):
+    image_url: str
