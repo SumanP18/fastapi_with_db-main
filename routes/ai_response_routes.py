@@ -6,7 +6,7 @@ from schemas.ai_response_schemas import AIRequest, AIResponse
 router = APIRouter()
 
 
-@router.post("/ask", response_model=AIResponse)
+@router.post("/ai_response", response_model=AIResponse)
 def ask_ai(request: AIRequest):
     """Get response from AI model."""
     try:
