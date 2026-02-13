@@ -37,7 +37,7 @@ app.add_middleware(
         "https://chat-gpt-frontend-revx84gkr-sumanp18s-projects.vercel.app",
         "https://chat-gpt-frontend-nine-delta.vercel.app",
     ],
-    allow_origin_regex="https://chat-gpt-frontend.*\.vercel\.app",
+    allow_origin_regex=r"https://chat-gpt-frontend.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
