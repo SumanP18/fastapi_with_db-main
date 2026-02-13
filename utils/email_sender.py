@@ -3,8 +3,8 @@ from email.message import EmailMessage
 from dotenv import load_dotenv
 import os
 load_dotenv()
-sender_email = os.environ["SENDER_EMAIL"]
-app_password = os.environ["APP_PASSWORD"]
+sender_email = os.environ.get("SENDER_EMAIL", "")
+app_password = os.environ.get("APP_PASSWORD", "")
 
 # Create the email
 def send_email(receiver_email: str, subject: str, content: str) -> None:
