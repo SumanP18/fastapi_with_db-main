@@ -51,7 +51,7 @@ if engine:
 
 @app.get("/")
 def read_root():
-    return {"status": "online", "message": "Chat Architecture API v2.0"}
+    return {"message": "Hello World"}
 
 if __name__ == "__main__":
     import uvicorn
